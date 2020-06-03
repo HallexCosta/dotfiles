@@ -115,5 +115,5 @@ export ZPLUG_HOME="$HOME/.zplug"
 export ZPLUG_CONFIG="$HOME/.zplug-config"
 
 # Bootstrap Plugins with ZINIT or ZPLUG (default: ZINIT)
-source ZINIT_CONFIG/init.zsh
-# source ZPLUG_CONFIG/init.zsh
+source $ZINIT_CONFIG/init.zsh
+# source $ZPLUG_CONFIG/init.zsh
