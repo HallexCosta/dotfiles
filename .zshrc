@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # My Alias
-source .alias
+source $HOME/.alias
 
 # Setting environment variable for automatic plug-in loading
 export ZINIT_HOME="$HOME/.zinit"
@@ -115,5 +115,5 @@ export ZPLUG_HOME="$HOME/.zplug"
 export ZPLUG_CONFIG="$HOME/.zplug-config"
 
 # Bootstrap Plugins with ZINIT or ZPLUG (default: ZINIT)
-source ZINIT_CONFIG/init.sh
-# source ZPLUG_CONFIG/init.sh
+source $ZINIT_CONFIG/init.zsh
+# source $ZPLUG_CONFIG/init.zsh
