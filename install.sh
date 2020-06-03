@@ -8,20 +8,32 @@ ln -s $(pwd)/.zshrc ~/.zshrc
 echo "Installing binaries:"
 
 echo "Updating apt-get packages"
-command sudo apt-get update
+echo <yourpassword> | command sudo apt-get update
 
 #echo "Installing chrome"
 
 #echo "Installing VS Code"
 
 echo "Making Zsh the default shell"
-command chsh -s $(which zsh)
+echo <yourpassword> | command chsh -s $(which zsh)
 
 echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
 echo "Installing NeoVim"
-command sudo add-apt-repository ppa:neovim-ppa/stable
-command sudo apt-get update
+echo | command sudo add-apt-repository ppa:neovim-ppa/stable
+echo <yourpassword> | command sudo apt-get update
+
+echo "Installing Zinit"
+command mkdir $HOME/.zinit-config
+command git clone https://github.com/HallexCosta/zinit.git $HOME/.zinit-config
+
+# echo "Installing Zplug"
+# command mkdir $HOME/.zplug-config
+# command git clone https://github.com/HallexCosta/zplug.git $HOME/.zplug-config
+
+echo "Installing settings and plugins NeoVim"
+command mkdir $HOME/.config/nvim
+command git clone https://github.com/HallexCosta/nvim.git $HOME/.config/nvim
 
 echo "Done!"
