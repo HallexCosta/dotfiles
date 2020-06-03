@@ -105,7 +105,7 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # My Alias
-source .alias
+source $HOME/.alias
 
 # Setting environment variable for automatic plug-in loading
 export ZINIT_HOME="$HOME/.zinit"
