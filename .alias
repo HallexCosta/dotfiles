@@ -1,4 +1,4 @@
-alias work='cd ~/local/work/development/'
+alias work='cd ~/local/development/'
 alias personal='cd ~/local/personal/'
 alias www='cd ~/local/www/'
 alias win='cd /mnt/c/'
