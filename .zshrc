@@ -117,3 +117,6 @@ export ZPLUG_CONFIG="$HOME/.zplug-config"
 # Bootstrap Plugins with ZINIT or ZPLUG (default: ZINIT)
 source $ZINIT_CONFIG/init.zsh
 # source $ZPLUG_CONFIG/init.zsh
+
+# Load NVM
+source ~/.nvm/nvm.sh
