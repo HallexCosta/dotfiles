@@ -36,4 +36,7 @@ echo "Installing settings and plugins NeoVim"
 command mkdir $HOME/.config/nvim
 command git clone https://github.com/HallexCosta/nvim.git $HOME/.config/nvim
 
+echo "Installing NVM"
+command curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+
 echo "Done!"
