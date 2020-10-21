@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/hallexcosta/.oh-my-zsh"
+export ZSH="~/.oh-my-zsh"
 
 # Export LS_COLORS (export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:")
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
