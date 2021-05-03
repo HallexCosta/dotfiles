@@ -1,56 +1,59 @@
+echo "Import envrionment variables"
+SSH_EMAIL=""
+#source ~/dotfiles/env.sh
+
 # VIM OR NEOVIM
 echo "Symlinking things:"
 
-ln -s $(pwd)/.gitconfig ~/.gitconfig
-ln -s $(pwd)/.zshrc ~/.zshrc
+# ln -s ~/dotfiles/.gitconfig ~/.gitconfig
+# ln -s ~/dotfiles/.zshrc ~/.zshrc
 
 # BINARIES
 echo "Installing binaries:"
 
-echo "Updating apt-get packages"
-echo <yourpassword> | command sudo apt-get update
+echo "Updating apt-get packages..."
+sudo apt-get update
 
-#echo "Installing chrome"
+echo "Installing NeoVim..."
+sudo add-apt-repository ppa:neovim-ppa/stable
+sudo apt-get update
 
-#echo "Installing VS Code"
+echo "Installing Neovim Sofi..." 
+mkdir $HOME/.config/nvim
+git clone https://github.com/HallexCosta/nvim.git $HOME/.config/nvim
 
-echo "Making Zsh the default shell"
-echo <yourpassword> | command chsh -s $(which zsh)
+echo "Installing NVM..."
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 
-echo "Installing Oh My Zsh"
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+echo "Create SSH Key..."
+ssh-keygen -t rsa -b 4096 -C $SSH_EMAIL
 
-echo "Installing NeoVim"
-echo | command sudo add-apt-repository ppa:neovim-ppa/stable
-echo <yourpassword> | command sudo apt-get update
+echo "Installing Zsh shell..."
+sudo apt install zsh
 
-echo "Installing Zinit"
-command mkdir $HOME/.zinit-config
-command git clone https://github.com/HallexCosta/zinit.git $HOME/.zinit-config
+echo "Installing Zinit..."
+mkdir $HOME/.zinit-config
+git clone https://github.com/HallexCosta/zinit.git $HOME/.zinit-config
 
-# echo "Installing Zplug"
-# command mkdir $HOME/.zplug-config
+# echo "Installing Zplug..."
+# mkdir $HOME/.zplug-config
 # command git clone https://github.com/HallexCosta/zplug.git $HOME/.zplug-config
 
-echo "Installing settings and plugins NeoVim"
-command mkdir $HOME/.config/nvim
-command git clone https://github.com/HallexCosta/nvim.git $HOME/.config/nvim
+echo "Making Zsh the default shell..."
+chsh -s $(which zsh)
 
-echo "Installing NVM"
-command curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+echo "Installing Oh My Zsh..."
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "Installing coc extensions"
-set -o nounset    # error when referencing undefined variable
-set -o errexit    # exit when command fails
+# echo "Rename default .zshrc to .zshrc.orig..."
+# mv ~/.zshrc ~/.zshrc.orig
 
-# Install extensions
-mkdir -p ~/.config/coc/extensions
-cd ~/.config/coc/extensions
-if [ ! -f package.json ]
-then
-  echo '{"dependencies":{}}'> package.json
-fi
-# Change extension names to the extensions you need
-npm install coc-snippets coc-python coc-tsserver coc-html coc-css coc-json coc-yaml --global-style --ignore-scripts --no-bin-links --no-package-lock --only=pro
+# echo "Copyging .zshrc configured..."
+# cp ~/dotfiles/.zshrc ~ 
+
+rm -rf ~/'~'
+
+echo "Restarting .zshrc file..."
+source ~/.zshrc
 
 echo "Done!"
