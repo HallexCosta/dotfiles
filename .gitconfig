@@ -1,5 +1,10 @@
 [user]
-	email = hallex.costa@hotmail.com
-	name = HallexCosta
+    name = HallexCosta
+    email = hallex.costa@hotmail.com
 [core]
-	editor = nvim
+    editor = editor
+    pager = most
+[color]
+    ui = auto
+[merge]
+    conflictstyle = diff3
