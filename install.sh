@@ -45,9 +45,6 @@ chsh -s $(which zsh)
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "Change mode for /etc/ to 777"
-sudo chmod -R 777 /etc/
-
 echo "Restarting .zshrc file..."
 source ~/.zshrc
 
