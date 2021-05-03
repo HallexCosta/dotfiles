@@ -1,8 +1,9 @@
 # Dotfiles
 
 ## Guide
-- Pre-Install
+- Configs
 - Install
+- Bin
 
 ### Configs 
 ```sh
@@ -19,4 +20,10 @@ $ cd dotfiles
 
 # Run auto install
 $ ./install.sh
+```
+
+### Bin
+```sh
+# Access the folder bin
+$ cd bin
 ```

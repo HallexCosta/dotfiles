@@ -1,5 +1,5 @@
 echo "Import envrionment variables"
-SSH_EMAIL=""
+SSH_EMAIL="hallex.costa@hotmail.com"
 #source ~/dotfiles/env.sh
 
 # VIM OR NEOVIM
@@ -45,13 +45,20 @@ chsh -s $(which zsh)
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# echo "Rename default .zshrc to .zshrc.orig..."
-# mv ~/.zshrc ~/.zshrc.orig
+echo "Set default directory in /"
+sudo cat >/etc/wsl.conf <<EOL
+# Enable extra metadata options by default
+[automount]
+enabled = true
+root = ~/
+options = "metadata,umask=22,fmask=11"
+mountFsTab = false
 
-# echo "Copyging .zshrc configured..."
-# cp ~/dotfiles/.zshrc ~ 
-
-rm -rf ~/'~'
+# Enable DNS – even though these are turned on by default, we'll specify here just to be explicit.
+[network]
+generateHosts = true
+generateResolvConf = true
+EOL
 
 echo "Restarting .zshrc file..."
 source ~/.zshrc
