@@ -45,6 +45,9 @@ chsh -s $(which zsh)
 echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
+echo "Change mode for /etc/ to 777"
+sudo chmod -R 777 /etc/
+
 echo "Set default directory in /"
 sudo cat >/etc/wsl.conf <<EOL
 # Enable extra metadata options by default
