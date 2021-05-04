@@ -1,11 +1,16 @@
-echo "Create symboliking for backup default configs .zshrc..."
-mv ~/.zshrc ~/.zshrc.orig
-ln -s ~/dotfiles/.zshrc ~/.zshrc
+echo "Create symboliking .zshrc modified..."
+mv $ZSH_MODIFIED_FILE $ZSH_MODIFIED_FILE.orig
+ln -s ~/dotfiles/.gitconfig $ZSH_MODIFIED_FILE
 
-echo "\nInstalling theme spaceship..."
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
-
-echo "\nCreate symboliking spaceship theme..."
+echo "Create symboliking spaceship theme..."
 ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
-echo "\nDone!"
+echo "Create symboliking .gitconfig..."
+if [ -f "$GIT_CONFIG_FILE" ]; then
+  mv $GIT_CONFIG_FILE $GIT_CONFIG_FILE.orig
+  ln -s ~/dotfiles/.gitconfig $GIT_CONFIG_FILE 
+else
+  ln -s ~/dotfiles/.gitconfig $GIT_CONFIG_FILE
+fi
+
+echo "Done!"
