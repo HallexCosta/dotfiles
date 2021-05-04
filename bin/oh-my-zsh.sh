@@ -1,7 +1,7 @@
 echo "Installing Zsh shell..."
 sudo apt install zsh
 
-echo "\nInstalling Zinit..."
+echo "Installing Zinit..."
 mkdir $HOME/.zinit-config
 git clone https://github.com/HallexCosta/zinit.git $HOME/.zinit-config
 
@@ -9,10 +9,10 @@ git clone https://github.com/HallexCosta/zinit.git $HOME/.zinit-config
 # mkdir $HOME/.zplug-config
 # command git clone https://github.com/HallexCosta/zplug.git $HOME/.zplug-config
 
-echo "\nMaking Zsh the default shell..."
+echo "Making Zsh the default shell..."
 chsh -s $(which zsh)
 
-echo "\nInstalling Oh My Zsh..."
+echo "Installing Oh My Zsh..."
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-echo "\nDone!"
+echo "Done!"

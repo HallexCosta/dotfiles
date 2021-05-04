@@ -1,4 +1,4 @@
-echo "\nInstalling yarn..."
+echo "Installing yarn..."
 sudo apt install yarn
 
-echo "\nDone"
+echo "Done"
