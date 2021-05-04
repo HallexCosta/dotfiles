@@ -2,7 +2,7 @@
     name = HallexCosta
     email = hallex.costa@hotmail.com
 [core]
-    editor = editor
+    editor = nvim 
     pager = most
 [color]
     ui = auto
