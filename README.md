@@ -3,11 +3,20 @@
 ## Guide
 - Configs
 - Install
+  - Tools
+  - Shell
+  - Shell Theme
+- Configure
 - Bin
 
 ### Configs 
 ```sh
-SSH_EMAIL='YOUR EMAIL'
+GIT_CONFIG_FILE=$HOME/.gitconfig
+ZSHRC_FILE=$HOME/.zshrc
+ALIAS_FILE=$HOME/.alias
+BIN_DIR=$HOME/dotfiles/bin
+ENV_CONFIGS=$HOME/configs/.env.sh
+SSH_EMAIL="YOUR EMAIL"
 ```
 
 ### Install
