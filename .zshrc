@@ -13,7 +13,7 @@ source $ZINIT_CONFIG/init.zsh
 # source $ZPLUG_CONFIG/init.zsh
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Export LS_COLORS (export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:")
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
