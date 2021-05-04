@@ -1,3 +1,6 @@
+echo "Installing psutil for zshrc..."
+pip3 install psutil
+
 echo "Create symboliking .zshrc modified..."
 if [ -f "$ZSHRC_CONFIG_FILE" ]; then
   mv $ZSHRC_FILE $ZSHRC_FILE.orig
