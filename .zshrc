@@ -1,5 +1,6 @@
 # Set default editor
-export EDITOR='/usr/bin/nvim'
+export VISUAL=which(nvim) || which(vim)
+export EDITOR="$VISUAL"
 
 # Setting environment variable for automatic plug-in loading
 export ZINIT_HOME="$HOME/.zinit"
@@ -36,12 +37,8 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-
 # My Alias
 source $HOME/.alias
 
 # Load NVM
-source ~/.nvm/nvm.sh
+source $HOME/.nvm/nvm.sh
