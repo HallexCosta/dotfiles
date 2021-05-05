@@ -17,7 +17,9 @@
 ## Configs
 
 ```sh
-# dotfiles/configs/.env.sh
+# dotfiles/configs/.env
+ROOT_DIR=$eval ("git alias") # EX: /home/hallexcosta
+TMUX_VERSION=3.2
 GIT_CONFIG_FILE=$HOME/.gitconfig
 ZSHRC_FILE=$HOME/.zshrc
 ALIAS_FILE=$HOME/.alias
@@ -57,7 +59,7 @@ SSH_EMAIL="name@example.com"
 | **7**  | NodeJS                      | ✅    |
 | **8**  | NPM                         | ✅    |
 | **9**  | Yarn                        | ✅    |
-| **10** | Tmux                        | ❌    |
+| **10** | Tmux                        | ✅    |
 
 [](#usage)
 
