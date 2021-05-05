@@ -1,6 +1,6 @@
-# Dotfiles
+<h1 align="center">Dotfiles by HallexCosta</h1>
 
-## Getting Started
+## Guide
 
 - [Configs](#configs)
 - [Auto Install](#install)
@@ -14,7 +14,7 @@
 
 [](#configs)
 
-### Configs
+## Configs
 
 ```sh
 GIT_CONFIG_FILE=$HOME/.gitconfig
@@ -32,7 +32,7 @@ SSH_EMAIL="name@example.com"
 
 [](#auto-install)
 
-### Auto Install
+## Auto Install
 
 | #     | Installers                  | Added |
 | ----- | --------------------------- | ----- |
@@ -43,7 +43,7 @@ SSH_EMAIL="name@example.com"
 
 [](#bins)
 
-### Bins
+## Bins
 
 | #      | Bins                        | Added |
 | ------ | --------------------------- | ----- |
@@ -64,7 +64,7 @@ SSH_EMAIL="name@example.com"
 
 [](#getting-started)
 
-### Getting Started
+## Getting Started
 
 ```sh
 # Clone the repo dotfiles
@@ -74,7 +74,7 @@ $ git clone https://github.com/HallexCosta/dotfiles.git
 $ cd dotfiles
 ```
 
-### Tools
+## Tools
 
 [](#tools)
 
@@ -83,7 +83,7 @@ $ cd dotfiles
 $ ./tools.sh
 ```
 
-### Shell
+## Shell
 
 [](#shell)
 
@@ -101,7 +101,7 @@ $ ./shell.sh
 $ ./shell-theme.sh
 ```
 
-### Configure
+## Configure
 
 [](#configure)
 
