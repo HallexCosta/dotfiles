@@ -1,2 +1,4 @@
 tmux-server-*.log
 tmux-client-*.log
+temp/**
+!temp/.gitkeep
