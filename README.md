@@ -1,4 +1,4 @@
-<h1 align="center">Dotfiles by HallexCosta</h1>
+<h1 align="center">Dotfiles</h1>
 
 ## Guide
 
@@ -17,6 +17,7 @@
 ## Configs
 
 ```sh
+# dotfiles/configs/.env.sh
 GIT_CONFIG_FILE=$HOME/.gitconfig
 ZSHRC_FILE=$HOME/.zshrc
 ALIAS_FILE=$HOME/.alias
