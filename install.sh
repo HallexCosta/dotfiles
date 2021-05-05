@@ -1,21 +1,9 @@
 echo "Import envrionment variables"
-GIT_CONFIG_FILE=~/.gitconfig
-BIN_DIR=~/dotfiles/bin
-ENV_CONFIGS=~/configs/.env.sh
-SSH_EMAIL="hallex.costa@hotmail.com"
-ZSH_MODIFIED_FILE=~/.zshrc
-source $HOME/dotfiles/configs/env.sh
+source ./configs/.env
 
-echo "Initializing auto-install..."
-source $BIN_DIR/binaries.sh
-source $BIN_DIR/nvm.sh
-source $BIN_DIR/yarn.sh
-source $BIN_DIR/nvim.sh
-source $BIN_DIR/ssh.sh
-source $BIN_DIR/oh-my-zsh.sh
-source $BIN_DIR/spaceship-theme.sh
-
-echo "Restarting .zshrc file..."
-source ~/.zshrc
+echo "Initializing auto-install tools, shell and shell-theme..."
+source $BINS_DIR/tools.sh
+source $BINS_DIR/shell.sh
+source $BINS_DIR/shell-theme.sh
 
 echo "Done!"
