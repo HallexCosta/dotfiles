@@ -1,4 +1,5 @@
+echo "Initializing auto-install shell-theme.."
 source ./configs/env.sh
-source $BIN_DIR/spaceship-theme.sh
+source $BINS_DIR/spaceship-theme.sh
 
 echo "Done!"
