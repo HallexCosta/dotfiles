@@ -8,3 +8,5 @@
     ui = auto
 [merge]
     conflictstyle = diff3
+[alias]
+	rootDir = rev-parse --show-toplevel
