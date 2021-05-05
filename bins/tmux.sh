@@ -1,28 +1,30 @@
-echo "Downloading..."
-# wget https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/tmux-$TMUX_VERSION.tar.gz
-curl -L -o $ROOT_DIR/temp/tmux-$TMUX_VERSION.tar.gz https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/tmux-$TMUX_VERSION.tar.gz
+echo "Verify if tmux was installed"
 
-echo "Root directory: $ROOT_DIR"
+if [[ $TMUX_UNINSTALLED == "" ]]; then
+  echo "Uninstalling tmux..."
+  sudo apt remove tmux
+fi 
 
-echo "Extracting...."
-tar xvf $ROOT_DIR/temp/tmux-$TMUX_VERSION.tar.gz -C $ROOT_DIR/temp
+echo "Clonning tmux..."
+
+git clone https://github.com/tmux/tmux.git $ROOT_DIR/temp/tmux
+cd $ROOT_DIR/temp/tmux
 
 echo "Installing libs..."
-sudo apt install libevent-dev ncurses-dev build-essential bison pkg-config
+sudo apt install automake libevent-dev
+
+echo "Compiling..."
+bash $ROOT_DIR/temp/tmux/autogen.sh
 
 echo "Building Tmux..."
-cd $ROOT_DIR/temp/tmux-$TMUX_VERSION
-$ROOT_DIR/temp/tmux-$TMUX_VERSION/configure
-make -C $ROOT_DIR/temp/tmux-$TMUX_VERSION
+$ROOT_DIR/temp/tmux/configure
+make -C $ROOT_DIR/temp/tmux
 
 echo "Installing Tmux..."
-sudo make install
+sudo make -C $ROOT_DIR/temp/tmux install
 
-echo "Removing file tmux-$TMUX_VERSION.tar.gz downloaded..."
-rm $ROOT_DIR/temp/tmux-$TMUX_VERSION.tar.gz
-
-echo "Removing folder tmux-$TMUX_VERSION downloaded..."
-rm -rf $ROOT_DIR/temp/tmux-$TMUX_VERSION
+# echo "Removing Tmux cloned..."
+# rm -rf $ROOT_DIR/temp/tmux
 
 printf "Version: "
 tmux -V
