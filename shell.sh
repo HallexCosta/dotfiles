@@ -1,6 +1,7 @@
-echo "Initializing auto-install shell.."
+echo "Import envrionment variables"
+source ./configs/.env
 
-source ./configs/env.sh
+echo "Initializing auto-install shell.."
 source $BINS_DIR/oh-my-zsh.sh
 
 echo "Done!"

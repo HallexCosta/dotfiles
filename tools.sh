@@ -1,5 +1,5 @@
 echo "Import envrionment variables"
-source ~/dotfiles/configs/env.sh
+source ./configs/.env
 
 echo "Initializing auto-install tools.."
 source $BINS_DIR/binaries.sh
