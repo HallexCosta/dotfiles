@@ -65,7 +65,7 @@ SSH_EMAIL="name@example.com"
 
 [](#getting-started)
 
-## Getting Started
+### Getting Started
 
 ```sh
 # Clone the repo dotfiles
@@ -75,7 +75,7 @@ $ git clone https://github.com/HallexCosta/dotfiles.git
 $ cd dotfiles
 ```
 
-## Tools
+### Tools
 
 [](#tools)
 
@@ -84,7 +84,7 @@ $ cd dotfiles
 $ ./tools.sh
 ```
 
-## Shell
+### Shell
 
 [](#shell)
 
@@ -102,7 +102,7 @@ $ ./shell.sh
 $ ./shell-theme.sh
 ```
 
-## Configure
+### Configure
 
 [](#configure)
 
