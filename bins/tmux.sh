@@ -23,8 +23,8 @@ make -C $ROOT_DIR/temp/tmux
 echo "Installing Tmux..."
 sudo make -C $ROOT_DIR/temp/tmux install
 
-# echo "Removing Tmux cloned..."
-# rm -rf $ROOT_DIR/temp/tmux
+echo "Removing Tmux cloned..."
+rm -rf $ROOT_DIR/temp/tmux
 
 printf "Version: "
 tmux -V
