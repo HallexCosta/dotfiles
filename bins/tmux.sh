@@ -5,8 +5,12 @@ if [[ $TMUX_UNINSTALLED == "" ]]; then
 fi 
 
 echo "Clonning tmux..."
-git clone https://github.com/tmux/tmux.git $ROOT_DIR/temp/tmux
-cd $ROOT_DIR/temp/tmux
+
+echo "ROOTDIR: $ROOT_DIR/temp/tmux"
+curl -L -o $ROOT_DIR/temp/tmux-$TMUX_VERSION.tar.gz https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/tmux-$TMUX_VERSION.tar.gz
+
+echo "Extracting...."
+tar xvf $ROOT_DIR/temp/tmux-$TMUX_VERSION.tar.gz -C $ROOT_DIR/temp
 
 echo "Installing libs..."
 sudo apt install automake libevent-dev
@@ -22,7 +26,7 @@ echo "Installing Tmux..."
 sudo make -C $ROOT_DIR/temp/tmux install
 
 echo "Removing Tmux cloned..."
-rm -rf $ROOT_DIR/temp/tmux
+#rm -rf $ROOT_DIR/temp/tmux
 
 printf "Version: "
 tmux -V
