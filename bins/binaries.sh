@@ -13,4 +13,7 @@ sudo add-apt-repository ppa:neovim-ppa/stable
 echo "Updating APT packages..."
 sudo apt-get update
 
+echo "Install C Compilar GCC"
+sudo apt install build-essential 
+
 echo "Done!"
