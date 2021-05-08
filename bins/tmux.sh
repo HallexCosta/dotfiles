@@ -1,19 +1,17 @@
 echo "Verify if tmux was installed"
-
 if [[ $TMUX_UNINSTALLED == "" ]]; then
   echo "Uninstalling tmux..."
   sudo apt remove tmux
 fi 
 
 echo "Clonning tmux..."
-
 git clone https://github.com/tmux/tmux.git $ROOT_DIR/temp/tmux
 cd $ROOT_DIR/temp/tmux
 
 echo "Installing libs..."
 sudo apt install automake libevent-dev
 
-echo "Compiling..."
+echo "Compiling Tmux..."
 bash $ROOT_DIR/temp/tmux/autogen.sh
 
 echo "Building Tmux..."
