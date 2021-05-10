@@ -23,6 +23,7 @@
 TMUX_UNINSTALLED=$(eval "which tmux")
 TMUX_VERSION=3.2
 ROOT_DIR=$(eval "git rev-parse --show-toplevel") # EX: /home/hallexcosta/dotfiles
+OH_MY_ZSH_DIR=$HOME/.oh-my-zsh
 GIT_CONFIG_FILE_UPDATED=$ROOT_DIR/configs/.gitconfig
 ZSHRC_FILE_UPDATED==$ROOT_DIR/configs/.zshrc
 ALIAS_FILE_UPDATED=$ROOT_DIR/configs/.alias
