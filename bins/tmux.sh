@@ -4,32 +4,39 @@ if [[ $TMUX_UNINSTALLED == "" ]]; then
   sudo apt remove tmux
 fi 
 
-echo "Clonning tmux..."
+echo ""
+echo "Clonning repo tmux..."
+git clone https://github.com/tmux/tmux.git $ROOT_DIR/tmp/tmux
 
-echo "ROOTDIR: $ROOT_DIR/temp/tmux"
-curl -L -o $ROOT_DIR/temp/tmux-$TMUX_VERSION.tar.gz https://github.com/tmux/tmux/releases/download/$TMUX_VERSION/tmux-$TMUX_VERSION.tar.gz
+echo ""
+echo "Goto to directory tmux repo cloned"
+cd $ROOT_DIR/tmp/tmux
 
-echo "Extracting...."
-tar xvf $ROOT_DIR/temp/tmux-$TMUX_VERSION.tar.gz -C $ROOT_DIR/temp
-
+echo ""
 echo "Installing libs..."
-sudo apt install automake libevent-dev
+sudo apt install automake libevent-dev ncurses-dev build-essential bison pkg-config
 
+echo ""
 echo "Compiling Tmux..."
-bash $ROOT_DIR/temp/tmux/autogen.sh
+sh autogen.sh
 
-echo "Building Tmux..."
-$ROOT_DIR/temp/tmux/configure
-make -C $ROOT_DIR/temp/tmux
+echo ""
+echo "Configuring Tmux..."
+./configure
 
-echo "Installing Tmux..."
-sudo make -C $ROOT_DIR/temp/tmux install
+echo ""
+echo "Building and Installing Tmux..."
+make && sudo make install
 
+echo ""
 echo "Removing Tmux cloned..."
-#rm -rf $ROOT_DIR/temp/tmux
+rm -rf $ROOT_DIR/tmp/tmux
 
+echo ""
 printf "Version: "
 tmux -V
 
 echo "Done!"
+
+
 
