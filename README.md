@@ -7,9 +7,11 @@
 - [Bins](#bins)
 - [Usage](#usage)
   - [Getting Started](#getting-started)
-  - [Tools](#tools)
-  - [Shell](#shell)
-  - [Shell Theme](#shell-theme)
+  - [Install](#install)
+  - [Custom Install](#custom-install)
+    - [Tools](#tools)
+    - [Shell](#shell)
+    - [Shell Theme](#shell-theme)
 - [Configure](#configure)
 
 [](#configs)
@@ -45,10 +47,11 @@ SSH_EMAIL="name@example.com"
 
 | #     | Installers                  | Added |
 | ----- | --------------------------- | ----- |
-| **1** | [Tools](#tools)             | ✅    |
-| **2** | [Shell](#shell)             | ✅    |
-| **3** | [Shell Theme](#shell-theme) | ✅    |
-| **4** | [Configure](#configure)     | ✅    |
+| **1** | [Install](#install)             | ✅    |
+| **2** | [Tools](#tools)             | ✅    |
+| **3** | [Shell](#shell)             | ✅    |
+| **4** | [Shell Theme](#shell-theme) | ✅    |
+| **5** | [Configure](#configure)     | ✅    |
 
 [](#bins)
 
@@ -82,6 +85,16 @@ $ git clone https://github.com/HallexCosta/dotfiles.git
 # Access project
 $ cd dotfiles
 ```
+
+[](#install)
+### Install
+```sh
+# Run auto install for my tools, shell, shell-theme and configure
+$ ./install.sh
+```
+
+[](#custom-install)
+## Custom Install
 
 ### Tools
 
