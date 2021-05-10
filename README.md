@@ -18,13 +18,19 @@
 
 ```sh
 # dotfiles/configs/.env
-ROOT_DIR=$eval ("git alias") # EX: /home/hallexcosta
+TMUX_UNINSTALLED=$(eval "which tmux")
 TMUX_VERSION=3.2
+ROOT_DIR=$(eval "git rev-parse --show-toplevel") # EX: /home/hallexcosta/dotfiles
+GIT_CONFIG_FILE_UPDATED=$ROOT_DIR/configs/.gitconfig
+ZSHRC_FILE_UPDATED==$ROOT_DIR/configs/.zshrc
+ALIAS_FILE_UPDATED=$ROOT_DIR/configs/.alias
+TMUX_FILE_UPDATED=$ROOT_DIR/configs/.tmux.conf
 GIT_CONFIG_FILE=$HOME/.gitconfig
 ZSHRC_FILE=$HOME/.zshrc
 ALIAS_FILE=$HOME/.alias
-BIN_DIR=$HOME/dotfiles/bin
-ENV_CONFIGS=$HOME/configs/.env.sh
+TMUX_FILE=$HOME/.tmux.conf
+BINS_DIR=$HOME/dotfiles/bins
+ENV_CONFIGS=$ROOT_DIR/configs/.env.sh
 SSH_EMAIL="name@example.com"
 ```
 
