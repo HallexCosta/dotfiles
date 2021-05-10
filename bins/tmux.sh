@@ -1,3 +1,4 @@
+echo ""
 echo "Verify if tmux was installed"
 if [[ $TMUX_UNINSTALLED == "" ]]; then
   echo "Uninstalling tmux..."
