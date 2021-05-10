@@ -21,4 +21,8 @@ echo ""
 echo "Install C Compilar GCC"
 sudo apt install build-essential 
 
+echo ""
+echo "Installing pip3..."
+sudo apt install python3-pip
+
 echo "Done!"
