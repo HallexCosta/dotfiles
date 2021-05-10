@@ -1,5 +1,6 @@
 echo ""
 echo "Installing theme spaceship..."
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+mkdir $HOME/.oh-my-zsh/themes/spaceship-prompt
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$HOME/.oh-my-zsh/themes/spaceship-prompt"
 
 echo "Done!"
