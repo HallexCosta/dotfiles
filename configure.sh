@@ -5,7 +5,8 @@ echo "Installing psutil for zshrc..."
 pip3 install psutil
 
 echo "Create symboliking spaceship theme..."
-ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH/themes/spaceship.zsh-theme"
+ln -s "$ZSH_CUSTOM_DIR/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM_DIR/themes/spaceship.zsh-theme"
+
 
 echo "Create symboliking .zshrc modified..."
 if [ -f "$ZSHRC_FILE" ]; then
