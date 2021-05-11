@@ -22,8 +22,9 @@
 # dotfiles/configs/.env
 TMUX_UNINSTALLED=$(eval "which tmux")
 TMUX_VERSION=3.2
-ROOT_DIR=$(eval "git rev-parse --show-toplevel") # EX: /home/hallexcosta/dotfiles
-OH_MY_ZSH_DIR=$HOME/.oh-my-zsh
+ROOT_DIR=$(eval "git rev-parse --show-toplevel") # EX: /home/username/dotfiles
+ZSH_DIR=$ZSH
+ZSH_CUSTOM_DIR=$ZSH_CUSTOM
 GIT_CONFIG_FILE_UPDATED=$ROOT_DIR/configs/.gitconfig
 ZSHRC_FILE_UPDATED==$ROOT_DIR/configs/.zshrc
 ALIAS_FILE_UPDATED=$ROOT_DIR/configs/.alias
@@ -34,7 +35,7 @@ ALIAS_FILE=$HOME/.alias
 TMUX_FILE=$HOME/.tmux.conf
 BINS_DIR=$HOME/dotfiles/bins
 ENV_CONFIGS=$ROOT_DIR/configs/.env.sh
-SSH_EMAIL="name@example.com"
+SSH_EMAIL="hallex.costa@hotmail.com"
 ```
 
 > The wsl.conf file found in `dotfiles/configs/wsl.conf`.
