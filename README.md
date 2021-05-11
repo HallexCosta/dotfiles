@@ -103,7 +103,8 @@ $ ./install.sh
 [](#tools)
 
 ```sh
-# Run auto install for my tools
+# In bash terminal
+# Run auto install for tools
 $ ./tools.sh
 ```
 
@@ -112,6 +113,7 @@ $ ./tools.sh
 [](#shell)
 
 ```sh
+# In bash terminal
 # Run auto install for shell (oh-my-zsh)
 $ ./shell.sh
 ```
@@ -121,6 +123,7 @@ $ ./shell.sh
 [](#shell-theme)
 
 ```sh
+# In ZSH terminal
 # Run auto install for shell theme (spaceship)
 $ ./shell-theme.sh
 ```
@@ -130,6 +133,7 @@ $ ./shell-theme.sh
 [](#configure)
 
 ```sh
+# In ZSH Terminal
 # Run auto configure for shell theme, .zshrc,
 # .gitconfig and .alias config
 $ ./configure.sh
