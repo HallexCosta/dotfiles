@@ -40,4 +40,13 @@ else
   ln -s $TMUX_FILE_UPDATED $TMUX_FILE
 fi
 
+echo "Use latest node version and npm"
+nvm use --lts
+
+print "node version: "
+node -v
+
+print "npm version: "
+npm -v
+
 echo "Done!"
