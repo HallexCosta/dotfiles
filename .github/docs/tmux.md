@@ -30,10 +30,10 @@ prefix + r (reload ~/.tmux.conf)
 [](#move-between-panes)
 #### Move between panes
 ```
-prefix + ctrl + h (move to left pane) 
-prefix + ctrl + l (move to right pane) 
-prefix + ctrl + k (move to up pane) 
-prefix + ctrl + j (move to down pane) 
+prefix + ctrl + h (move to left panel) 
+prefix + ctrl + l (move to right panelj) 
+prefix + ctrl + k (move to up panel) 
+prefix + ctrl + j (move to down panel) 
 ```
 
 [](#resize-panes)
