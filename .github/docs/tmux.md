@@ -5,6 +5,7 @@
 - [Usage](#usage)
   - [Reload Config File](#reload-config-file)
   - [Move Between Panes](#move-between-pane)
+  - [Resize Panes](#resize-panes)
 
 
 [](#getting-started)
@@ -35,3 +36,11 @@ prefix + ctrl + k (move to up pane)
 prefix + ctrl + j (move to down pane) 
 ```
 
+[](#resize-panes)
+#### Resize Panes
+```
+prefix_hold + ctrl + h (resize left panel) 
+prefix_hold + ctrl + l (resize right panel) 
+prefix_hold + ctrl + k (resize up panel) 
+prefix_hold + ctrl + j (resize down panel) 
+```
