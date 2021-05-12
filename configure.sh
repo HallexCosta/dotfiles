@@ -8,12 +8,12 @@ echo "Create symboliking spaceship theme..."
 ln -s "$ZSH_CUSTOM_DIR/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM_DIR/themes/spaceship.zsh-theme"
 
 
-echo "Create symboliking .zshrc modified..."
+echo "Copying .zshrc modified..."
 if [ -f "$ZSHRC_FILE" ]; then
   mv $ZSHRC_FILE $ZSHRC_FILE.orig
-  ln -s $ZSHRC_FILE_UPDATED $ZSHRC_FILE
+  mv $ZSHRC_FILE_UPDATED $ZSHRC_FILE
 else
-  ln -s $ZSHRC_FILE_UPDATED $ZSHRC_FILE
+  mv $ZSHRC_FILE_UPDATED $ZSHRC_FILE
 fi
 
 echo "Create symboliking .gitconfig..."
