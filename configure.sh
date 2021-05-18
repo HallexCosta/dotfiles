@@ -43,7 +43,10 @@ source ~/.zshrc
 echo "Installing psutil for zshrc..."
 pip3 install psutil
 
-echo "Use latest node version and npm"
+echo "Installing latest node and npm version"
+nvm install --lts
+
+echo "Use latest node and npm version"
 nvm use --lts
 
 print "node version: "
