@@ -20,7 +20,6 @@
 
 ```sh
 # dotfiles/configs/.env
-TMUX_UNINSTALLED=$(eval "which tmux")
 TMUX_VERSION=3.2
 ROOT_DIR=$(eval "git rev-parse --show-toplevel") # EX: /home/username/dotfiles
 ZSH_DIR=$ZSH
