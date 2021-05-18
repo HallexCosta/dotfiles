@@ -55,4 +55,7 @@ node -v
 print "npm version: "
 npm -v
 
+echo "Installing and updating nvim plugins"
+nvim +PlugInstall +UpdateRemotePlugins
+
 echo "Done!"
