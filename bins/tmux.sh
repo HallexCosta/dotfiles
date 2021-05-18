@@ -1,6 +1,6 @@
 echo ""
 echo "Verify if tmux was installed"
-if [[ $TMUX_UNINSTALLED == "" ]]; then
+if which tmux >/dev/null; then
   echo "Uninstalling tmux..."
   sudo apt remove tmux
 fi 
