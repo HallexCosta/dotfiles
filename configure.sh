@@ -8,9 +8,9 @@ ln -s "$ZSH_CUSTOM_DIR/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM
 echo "Copying .zshrc modified..."
 if [ -f "$ZSHRC_FILE" ]; then
   mv $ZSHRC_FILE $ZSHRC_FILE.orig
-  cp $ZSHRC_FILE_UPDATED $ZSHRC_FILE
+  cp $ZSHRC_FILE_UPDATED $HOME
 else
-  mv $ZSHRC_FILE_UPDATED $ZSHRC_FILE
+  cp $ZSHRC_FILE_UPDATED $HOME
 fi
 
 echo "Create symboliking .gitconfig..."
