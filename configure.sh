@@ -1,9 +1,6 @@
 echo "Import envrionment variables"
 source ./configs/.env
 
-echo "Installing psutil for zshrc..."
-pip3 install psutil
-
 echo "Create symboliking spaceship theme..."
 ln -s "$ZSH_CUSTOM_DIR/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM_DIR/themes/spaceship.zsh-theme"
 
@@ -42,6 +39,9 @@ fi
 
 echo "Re-loading .zshrc file..."
 source ~/.zshrc
+
+echo "Installing psutil for zshrc..."
+pip3 install psutil
 
 echo "Use latest node version and npm"
 nvm use --lts
