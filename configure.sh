@@ -40,6 +40,9 @@ else
   ln -s $TMUX_FILE_UPDATED $TMUX_FILE
 fi
 
+echo "Re-loading .zshrc file..."
+source ~/.zshrc
+
 echo "Use latest node version and npm"
 nvm use --lts
 
