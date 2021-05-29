@@ -48,7 +48,7 @@ SSH_EMAIL="hallex.costa@hotmail.com"
 
 | #     | Installers                  | Added |
 | ----- | --------------------------- | ----- |
-| **1** | [Install](#install)             | ✅    |
+| **1** | [Install](#install)         | ✅    |
 | **2** | [Tools](#tools)             | ✅    |
 | **3** | [Shell](#shell)             | ✅    |
 | **4** | [Shell Theme](#shell-theme) | ✅    |
@@ -70,6 +70,7 @@ SSH_EMAIL="hallex.costa@hotmail.com"
 | **8**  | NPM                         | ✅    |
 | **9**  | Yarn                        | ✅    |
 | **10** | Tmux                        | ✅    |
+| **10** | Dotnet                      | ✅    |
 
 [](#usage)
 
@@ -88,13 +89,16 @@ $ cd dotfiles
 ```
 
 [](#install)
+
 ### Install
+
 ```sh
 # Run auto install for my tools, shell, shell-theme and configure
 $ ./install.sh
 ```
 
 [](#custom-install)
+
 ## Custom Install
 
 ### Tools
