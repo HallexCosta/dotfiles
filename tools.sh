@@ -9,5 +9,6 @@ source $BINS_DIR/yarn.sh
 source $BINS_DIR/neovim.sh
 source $BINS_DIR/tmux.sh
 source $BINS_DIR/ssh.sh
+source $BINS_DIR/dotnet.sh
 
 echo "Done!"
